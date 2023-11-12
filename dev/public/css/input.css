@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* src url 必须参考 tailwind 的输出文件, 不是input.css 文件 */
+@layer base {
+    @font-face {
+        font-family: 'pingfang';
+        src: url('./fonts/PingFang.ttc');
+    }
+}
+
+* {
+    font-family: pingfang;
+}
+
+label {
+    cursor: pointer;
+}
+
+#imageName {
+    color: green;
+}

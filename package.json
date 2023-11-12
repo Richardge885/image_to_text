@@ -1,0 +1,32 @@
+{
+  "name": "image_to_text",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dev/main.js",
+  "scripts": {
+    "start": "electron .",
+    "twwatch": "tailwindcss -i ./dev/public/css/input.css -o ./dev/public/css/index.css --watch",
+    "twbuild": "tailwindcss -i ./dev/public/css/input.css -o ./dev/public/css/index.css",
+    "build-win": "electron-builder --w",
+    "build-mac": "electron-builder --m"
+  },
+  "author": "Richard Ge",
+  "license": "ISC",
+  "build": {
+    "appId": "com.textFromImage.image",
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "zip"
+    }
+  },
+  "devDependencies": {
+    "electron": "^27.0.4",
+    "electron-packager": "^17.1.2"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.3.5",
+    "tesseract.js": "^5.0.3"
+  }
+}
